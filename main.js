@@ -45,38 +45,30 @@ if (numero2!==0){
 }
 
 
-//Menú de la calculadora
-
-    console.log(" Opción 1 Sumar")
-    console.log(" Opción 2 Restar")
-    console.log(" Opción 3 Multiplicar")
-    console.log(" Opción 4 Dividir")
-    console.log(" Opción 5 Salir")
-
     //Este bucle o ciclo realiza las iteraciones en cada condicional y en estos se han utilizado como llamada las funciones realizadas anteriormente
     do{
-     numeroElegido = parseFloat (prompt("Por favor elija una de las siguientes opciones para realizar una operación"))
+     numeroElegido = parseFloat (prompt("Por favor elija una de las siguientes opciones para realizar una operación : 1 Sumar, 2 Restar, 3 Multiplicar, 4 Dividir, 5 Salir "))
     seguirOperando = confirm ("Desea elegir otra opción")
 
     if(numeroElegido===1){
         resultado = sumar(numero1,numero2)
-        console.log("El resulatdo de la suma es: " + resultado)
+        alert("El resulatdo de la suma es: " + resultado)
     }
     if(numeroElegido===2){
         resultado = restar(numero1,numero2)
-        console.log("El resultado de la resta es: " + resultado)
+        alert("El resultado de la resta es: " + resultado)
     }
     if(numeroElegido===3){
         resultado = multiplicar(numero1,numero2)
-        console.log ("El resultado de la multiplicación es: " + resultado)
+        alert ("El resultado de la multiplicación es: " + resultado)
     }
     if(numeroElegido===4){
         resultado = dividir(numero1,numero2)
-        console.log ("El resultado de la división es: " + resultado)
+        alert ("El resultado de la división es: " + resultado)
     }else if(numeroElegido===5){
-        seguirOperando = confirm ("Desea salir de la calculadora")
-        console.log ("Final de la calculadora ")
-        console.log ("...............")
+        seguirOperando = false
+        alert ("Final de la calculadora ")
+        alert ("...............")
     }
     }while (seguirOperando)
     
